@@ -1,0 +1,1 @@
+cwebp -m 6 -q 65 -alpha_q 55 -alpha_filter best comicnaturalhist00steprich_raw_0266.png -o comicnaturalhist00steprich_raw_0266.webp

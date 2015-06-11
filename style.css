@@ -1,0 +1,124 @@
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2015 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      The Questa Project
+ * License URL: http://www.fontspring.com/licenses/the-questa-project/webfont
+ *
+ *
+ */
+
+@font-face {
+	font-family: 'questaregular';
+	src: url('questa_regular_macroman/2-Questa_Regular-webfont.eot');
+	src: url('questa_regular_macroman/2-Questa_Regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('questa_regular_macroman/2-Questa_Regular-webfont.woff2') format('woff2'),
+		url('questa_regular_macroman/2-Questa_Regular-webfont.woff') format('woff'),
+		url('questa_regular_macroman/2-Questa_Regular-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* { box-sizing: border-box; }
+
+body, html {
+	margin: 0; padding: 0;
+}
+
+html {
+	font-family: questaregular, Baskerville, Constantia, Palatino, Georgia, serif;
+	color: #39393A;
+	background-image: url("images/background-16colors-neuquant.png");
+	font-size: 18px;
+	background-color: #fafafa;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+
+p {
+	max-width: 58ch;
+	line-height: 1.6;
+	margin: 1em auto;
+	padding: 0 1em;
+	hyphens: auto;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+}
+
+cite { font-style: normal; }
+cite:before { content: "“"; }
+cite:after { content: "”"; }
+
+@supports ( (hyphens: auto) or (-webkit-hyphens: auto) or (-moz-hyphens: auto) or (-ms-hyphens: auto) ) {
+	@media (min-width: 640px) {
+		p { text-align: justify; }
+	}
+}
+
+.logo {
+	width: 220px;
+	max-width: 80vw;
+	margin-top: 30px;
+	margin-left: 10vw;
+	margin-bottom: 30px;
+}
+
+@media (min-width: 640px) {
+	.logo {
+		width: 250px;
+		margin-top: 50px;
+	}
+}
+
+.illustration {
+	width: 100vw;
+	max-width: 66ch;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (min-width: 640px) {
+	.illustration { border-radius: 1em; }
+}
+
+h1, h2, .h, .name {
+	text-align: center;
+	max-width: none;
+}
+
+h1, h2, .h {
+	font-weight: normal;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	margin-top: 1em;
+	margin-bottom: 0;
+	font-size: 1.5em;
+}
+
+@media (min-width: 640px) {
+	h1 { font-size: 2em; }
+}
+
+.hgroup {
+	margin: 5em 1em;
+}
+.author {
+	text-align: right;
+	font-variant: small-caps;
+}
