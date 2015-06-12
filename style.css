@@ -42,11 +42,11 @@ body, html {
 html {
 	font-family: questaregular, Baskerville, Constantia, Palatino, Georgia, serif;
 	color: #39393A;
-	background-image: url("images/background-16colors-neuquant.png");
+	background-image: url("images/background-16colors-neuquant.png"), url("images/background-1024.jpg");
 	font-size: 18px;
 	background-color: #fafafa;
-	background-size: 100% auto;
-	background-repeat: no-repeat;
+	background-size: 100% auto, 512px auto;
+	background-repeat: no-repeat, repeat;
 }
 
 p {
@@ -80,21 +80,19 @@ cite:after { content: "”"; }
 
 @supports ( (hyphens: auto) or (-webkit-hyphens: auto) or (-moz-hyphens: auto) or (-ms-hyphens: auto) ) {
 	@media (min-width: 640px) {
-		p { text-align: justify; }
+		p:not(.hgroup p, .pseudonym) { text-align: justify; }
 	}
 }
 
 .logo {
-	width: 220px;
-	max-width: 80vw;
-	margin-top: 30px;
-	margin-left: 10vw;
-	margin-bottom: 30px;
+	width: 200px;
+	max-width: 82vw;
+	margin: 8vw;
+	margin-bottom: 0;
 }
 @media (min-width: 640px) {
 	.logo {
 		width: 250px;
-		margin-top: 50px;
 	}
 }
 a.go-home {
@@ -146,12 +144,13 @@ h1, .h {
 }
 
 footer {
-	text-align: center;
 	padding: 5em 1em 8em 1em;
 }
-
-footer > p:first-child {
-	margin-bottom: -1em;
+footer p {
+	text-align: center !important;
+}
+footer .next {
+	display: block;
 }
 
 
@@ -200,10 +199,11 @@ footer > p:first-child {
 	-webkit-display: flex;
 	display: flex;
 	-webkit-align-items: center;
-	align-items: center;
+	        align-items: center;
 	-webkit-flex-wrap: wrap;
-	flex-wrap: wrap;
-	justify-content: center;
+	        flex-wrap: wrap;
+	-webkit-justify-content: center;
+	        justify-content: center;
 	text-align: center;
 }
 
@@ -211,10 +211,13 @@ footer > p:first-child {
 	margin: 1em;
 	max-width: 10em;
 }
+
 @media (min-width: 480px) {
 	.table-of-contents > li > a {
-		justify-content: flex-start;
-		flex-wrap: nowrap;
+		-webkit-justify-content: flex-start;
+		        justify-content: flex-start;
+		-webkit-flex-wrap: nowrap;
+		        flex-wrap: nowrap;
 	}
 	.table-of-contents .hgroup {
 		text-align: left;
