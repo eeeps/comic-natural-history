@@ -52,7 +52,8 @@ html {
 p {
 	max-width: 58ch;
 	line-height: 1.6;
-	margin: 1em auto;
+	margin: 0 auto;
+	text-indent: 1.25em;
 	padding: 0 1em;
 	-webkit-hyphens: auto;
 	   -moz-hyphens: auto;
@@ -208,9 +209,14 @@ footer .next {
 }
 
 .table-of-contents .illustration {
-	margin: 1em;
-	max-width: 10em;
+	margin: 0.5em;
+	width: 10em;
 }
+
+.table-of-contents picture {
+	flex-shrink: 0;
+}
+
 
 @media (min-width: 480px) {
 	.table-of-contents > li > a {
