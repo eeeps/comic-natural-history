@@ -248,8 +248,8 @@ footer .next {
 .table-of-contents > li > a {
 	padding: 2em 0;
 	border-bottom: none;
-	-webkit-display: flex;
-	        display: flex;
+	display: -webkit-flex;
+	display: flex;
 	-webkit-align-items: center;
 	        align-items: center;
 	-webkit-flex-wrap: wrap;
