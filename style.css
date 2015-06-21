@@ -33,24 +33,59 @@
 	font-style: normal;
 }
 
-* { box-sizing: border-box; }
+* {
+	box-sizing: border-box;
+}
 
-body, html {
-	margin: 0; padding: 0;
+body,
+html {
+	margin: 0;
+	padding: 0;
 }
 
 html {
 	font-family: questaregular, Baskerville, Constantia, Palatino, Georgia, serif;
 	color: #39393A;
-	background-image: url("images/background-16colors-neuquant.png"), url("images/background-1024.jpg");
+	background-image: url("images/background-320-neuquant-16colors-nodither.png"), url("images/background-320.jpg");
 	font-size: 18px;
 	background-color: #fafafa;
-	background-size: 100% auto, 512px auto;
+	background-size: 100% auto, 320px auto;
 	background-repeat: no-repeat, repeat;
 }
 
+/* 321-640px && 1x */
+@media
+( min-width: 321px ) {
+	html { 
+		background-image: url("images/background-640-neuquant-16colors-nodither.png"), url("images/background-320.jpg");
+	}
+}
+
+/* 160-320px && 2x */
+@media
+( min-width: 161px ) and ( min-resolution: 192dpi ),
+( min-width: 161px ) and ( -webkit-min-device-pixel-ratio: 2 ) {
+	html { 
+		background-image: url("images/background-640-neuquant-16colors-nodither.png"), url("images/background-640.jpg");
+	}
+}
+
+/* >= 641px && 1x */
+@media 
+( min-width: 641px ) {
+	html { background-image: url("images/background-1280-neuquant-16colors-nodither.png"), url("images/background-320.jpg"); }
+}
+
+/* >= 321px + 2x */
+@media
+( min-width: 321px ) and ( min-resolution: 192dpi ),
+( min-width: 321px ) and ( -webkit-min-device-pixel-ratio: 2 )
+{
+	html { background-image: url("images/background-1280-neuquant-16colors-nodither.png"), url("images/background-640.jpg"); }
+}
+
 p {
-	max-width: 58ch;
+	max-width: 32em;
 	line-height: 1.6;
 	margin: 0 auto;
 	text-indent: 1.25em;
@@ -75,68 +110,82 @@ a:active {
 	border-bottom-color: #a7bfb0;
 }
 
-cite { font-style: normal; }
-cite:before { content: "“"; }
-cite:after { content: "”"; }
+cite {
+	font-style: normal;
+}
+
+cite:before {
+	content: "“";
+}
+
+cite:after {
+	content: "”";
+}
 
 @supports ( (hyphens: auto) or (-webkit-hyphens: auto) or (-moz-hyphens: auto) or (-ms-hyphens: auto) ) {
 	@media (min-width: 640px) {
-		p:not(.hgroup p, .pseudonym) { text-align: justify; }
+		p:not(.hgroup p, .pseudonym) {
+			text-align: justify;
+		}
 	}
 }
 
 .logo {
-	width: 200px;
+	width: 10em;
 	max-width: 82vw;
 	margin: 8vw;
 	margin-bottom: 0;
 }
+
 @media (min-width: 640px) {
 	.logo {
-		width: 250px;
+		width: 15em;
 	}
 }
-a.go-home {
-	border-bottom: none;
-}
-
-
 
 .illustration {
 	width: 100%;
-	max-width: 66ch;
+	max-width: 640px;
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 1em auto;
 }
 
 @media (min-width: 640px) {
-	.illustration { border-radius: 1em; }
+	.illustration {
+		border-radius: 1em;
+	}
 }
-
 
 .hgroup {
 	text-align: center;
 	margin: 5em 0.5em;
 }
 
-.h, .latin-name {
+.h,
+.latin-name {
 	max-width: none;
 }
 
-h1, .h {
+h1,
+.h {
 	font-weight: normal;
-	letter-spacing: 0.1em;
+	letter-spacing: 0.1625em;
 	text-transform: uppercase;
 	font-size: 1.25em;
 }
 
 @media (min-width: 640px) {
-	.h { font-size: 1.5em; }
-	h1 { font-size: 2em; }
+	.h {
+		font-size: 1.5em;
+	}
+	h1 {
+		font-size: 2em;
+	}
 }
 
-
+a.go-home {
+	border-bottom: none;
+}
 
 .pseudonym {
 	text-align: right;
@@ -147,14 +196,16 @@ h1, .h {
 footer {
 	padding: 5em 1em 8em 1em;
 }
+
 footer p {
 	text-align: center !important;
 }
+
 footer .next {
 	display: block;
 }
 
-
+/* Index */
 
 .giant-logotype {
 	margin: 0;
@@ -184,21 +235,21 @@ footer .next {
 
 .table-of-contents {
 	list-style: none;
-	max-width: 66ch;
+	max-width: 33em;
 	margin: 5em auto;
 	padding: 0;
 }
 
-.table-of-contents > li {
-	min-height: 12em;
-	margin: 3em 0;
+.table-of-contents > li,
+.table-of-contents > li > a {
+	min-height: 16em;
 }
 
 .table-of-contents > li > a {
-
+	padding: 2em 0;
 	border-bottom: none;
 	-webkit-display: flex;
-	display: flex;
+	        display: flex;
 	-webkit-align-items: center;
 	        align-items: center;
 	-webkit-flex-wrap: wrap;
@@ -207,16 +258,6 @@ footer .next {
 	        justify-content: center;
 	text-align: center;
 }
-
-.table-of-contents .illustration {
-	margin: 0.5em;
-	width: 10em;
-}
-
-.table-of-contents picture {
-	flex-shrink: 0;
-}
-
 
 @media (min-width: 480px) {
 	.table-of-contents > li > a {
@@ -229,20 +270,47 @@ footer .next {
 		text-align: left;
 	}
 }
+
+.table-of-contents .illustration {
+	margin: 0.5em;
+	width: 226px;
+}
+
+.table-of-contents picture {
+	-webkit-flex-shrink: 0;
+	        flex-shrink: 0;
+}
+
+.table-of-contents .hgroup {
+	margin: 0.5em;
+	width: 100%; /* with `flex-shrink: 0` and `width: 10em` on the picture/illustration, this ensures that the .hgroup takes up the rest of the remaining space... either actually 100% when it's `flex-wrap: wrap` or on the same line as the illustration, when the container is `flex-wrap: nowrap` */
+}
+
+.table-of-contents .h {
+	margin-top: 0;
+	margin-bottom: 0.2em;
+}
+
+.table-of-contents a .h > span {
+	border-bottom: 0.0625em solid #a7bfb0;
+}
+
+.table-of-contents a:hover .h > span {
+	border-bottom-color: black;
+}
+
+.table-of-contents a:active .h > span {
+	color: #a7bfb0;
+	border-bottom-color: #a7bfb0;
+}
+
 @media (min-width: 800px) {
 	.table-of-contents .h {
 		font-size: 1.75em;
 	}
 }
 
-.table-of-contents .h {
-	display: block;
-	letter-spacing: 0.2em;
-	margin-top: 0;
+small a {
+	border-bottom-width: 0.1em;
 }
-
-.table-of-contents .hgroup {
-	margin: 0.5em;
-}
-
 
