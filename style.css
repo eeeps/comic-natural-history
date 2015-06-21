@@ -51,6 +51,7 @@ html {
 	background-color: #fafafa;
 	background-size: 100% auto, 320px auto;
 	background-repeat: no-repeat, repeat;
+	padding-bottom: 5em;
 }
 
 /* 321-640px && 1x */
@@ -94,6 +95,10 @@ p {
 	   -moz-hyphens: auto;
 	    -ms-hyphens: auto;
 	        hyphens: auto;
+}
+
+.hgroup p, .pseudonym, footer p{
+	text-indent: 0;
 }
 
 a {
@@ -194,7 +199,7 @@ a.go-home {
 }
 
 footer {
-	padding: 5em 1em 8em 1em;
+	padding: 1em;
 }
 
 footer p {
@@ -202,6 +207,7 @@ footer p {
 }
 
 footer .next {
+	padding-top: 2em;
 	display: block;
 }
 
@@ -236,8 +242,14 @@ footer .next {
 .table-of-contents {
 	list-style: none;
 	max-width: 36em;
-	margin: 5em auto;
+	margin: 1em auto;
 	padding: 0;
+}
+
+@media (min-width: 480px) {
+	.table-of-contents {
+		margin: 3em auto;
+	}
 }
 
 .table-of-contents > li,
@@ -274,6 +286,12 @@ footer .next {
 .table-of-contents .illustration {
 	margin: 0.5em;
 	width: 226px;
+}
+
+@media (min-width: 227px) {
+	.table-of-contents .illustration {
+		border-radius: 1em;
+	}
 }
 
 .table-of-contents picture {
