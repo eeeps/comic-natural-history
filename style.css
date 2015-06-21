@@ -33,17 +33,6 @@
 	font-style: normal;
 }
 
-@font-face {
-    font-family: 'questa_granderegular';
-    src: url('questagrande_regular_macroman/2-Questa_Grande_Regular-webfont.eot');
-    src: url('questagrande_regular_macroman/2-Questa_Grande_Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('questagrande_regular_macroman/2-Questa_Grande_Regular-webfont.woff2') format('woff2'),
-         url('questagrande_regular_macroman/2-Questa_Grande_Regular-webfont.woff') format('woff'),
-         url('questagrande_regular_macroman/2-Questa_Grande_Regular-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 * {
 	box-sizing: border-box;
 }
@@ -170,12 +159,6 @@ cite:after {
 .hgroup {
 	text-align: center;
 	margin: 5em 0.5em;
-}
-
-h1,
-.h,
-.latin-name {
-	font-family: questa_granderegular, inherit;
 }
 
 .h,
