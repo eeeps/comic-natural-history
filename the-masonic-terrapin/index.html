@@ -15,8 +15,19 @@
 <a href="/" class="go-home"><img class="logo" src="/images/The_Comic_Natural_History.svg" alt="The Comic Natural History" /></a>
 
 <picture>
-	<source type="image/webp" srcset="medium.webp" />
-	<img class="illustration" src="medium.jpg" alt />
+	<source type="image/webp"
+	        srcset="medium.webp    640w,
+	                thumb.webp     224w,
+	                thumb@2x.webp  448w,
+	                small.webp     320w,
+	                large.webp    1280w" />
+	<img class="illustration"
+	     srcset="medium.jpg    640w,
+	             thumb.jpg     224w,
+	             thumb@2x.jpg  448w,
+	             small.jpg     320w,
+	             large.jpg    1280w"
+	     src="medium.jpg" alt />
 </picture>
 
 <div class="hgroup">

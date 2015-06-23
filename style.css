@@ -97,7 +97,7 @@ p {
 	        hyphens: auto;
 }
 
-.hgroup p, .pseudonym, footer p{
+.hgroup p, .pseudonym, footer p {
 	text-indent: 0;
 }
 
@@ -137,8 +137,8 @@ cite:after {
 
 .logo {
 	width: 10em;
-	max-width: 82vw;
-	margin: 8vw;
+	max-width: 82%;
+	margin: 8%;
 	margin-bottom: 0;
 }
 
@@ -216,8 +216,8 @@ footer .next {
 .giant-logotype {
 	margin: 0;
 	margin-bottom: 3em;
-	width: 100vw;
-	height: calc( 100vw / 2.75 );
+	width: 100%;
+	height: calc( 100vw / 2.75 ); /* fixed aspect ratio */
 	display: -webkit-flex;
 	display: flex;
 	-webkit-justify-content: center;
@@ -229,8 +229,8 @@ footer .next {
 
 .giant-logotype img {
 	width: 100%;
-	max-width: 35rem;
-	max-height: calc( 100vw / 2.75 );
+	max-width: 560px;
+	max-height: calc( 100vw / 2.75 ); /* fixed aspect ratio */
 }
 
 @media ( min-width: 480px ) { 
