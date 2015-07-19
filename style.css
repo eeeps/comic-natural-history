@@ -46,7 +46,7 @@ html {
 html {
 	font-family: questaregular, Baskerville, Constantia, Palatino, Georgia, serif;
 	color: #39393A;
-	background-image: url("images/background-320-neuquant-16colors-nodither.png"), url("images/background-320.jpg");
+	background-image: url("images/background-320-neuquant-16colors-nodither.png");
 	font-size: 18px;
 	background-color: #fafafa;
 	background-size: 100% auto, 320px auto;
@@ -148,7 +148,7 @@ cite:after {
 	}
 }
 
-.illustration {
+.illustration, .thumbnail {
 	width: 100%;
 	max-width: 640px;
 	display: block;
@@ -156,7 +156,7 @@ cite:after {
 }
 
 @media (min-width: 640px) {
-	.illustration {
+	.illustration, .thumbnail {
 		border-radius: 1em;
 	}
 }
@@ -283,13 +283,13 @@ footer .next {
 	}
 }
 
-.table-of-contents .illustration {
+.thumbnail {
 	margin: 0.5em;
 	width: 226px;
 }
 
 @media (min-width: 227px) {
-	.table-of-contents .illustration {
+	.thumbnail {
 		border-radius: 1em;
 	}
 }
