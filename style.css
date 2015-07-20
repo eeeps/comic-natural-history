@@ -290,7 +290,7 @@ footer .next {
 
 @media (min-width: 227px) {
 	.thumbnail {
-		border-radius: 1em;
+		border-radius: 1em !important;
 	}
 }
 
