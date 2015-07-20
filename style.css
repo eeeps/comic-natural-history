@@ -198,6 +198,18 @@ a.go-home {
 	letter-spacing: 0.05em;
 }
 
+.racist {
+	display: none;
+}
+
+.inline-blockquote {
+	display: block;
+	text-indent: 0;
+	text-align: center;
+	font-size: 0.8625em;
+	padding: 1em;
+}
+
 footer {
 	padding: 1em;
 }
